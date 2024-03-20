@@ -1,0 +1,29 @@
+StateDiagram [frame=true framecolor=steelblue label="State Diagram" splines=ortho] {
+	
+  state "Évènement proposé" as e1 with behavior "Ouverture des Paris"
+  state "Evènement annulé" as e2 with behavior "soldeParieur += mise"
+  state "Évènement en cours" as e3 with behavior "Fin pari simple"
+  state "Évènement prolongé" as e4 with behavior "durée evènement augmentée"
+  state "Évènement terminé" as e5 with behavior "Fin Pari avancé"
+
+  
+  initialState -> e1 "BookMaker sélectionne l'évènement"
+  
+ choice c
+ e1 -> c
+ c -> e3 "Debut match"
+  
+ choice c1
+ e3 -> c1
+ c1 -> e5 "Match terminé"
+ c1 -> e4 "temps additionnel"
+  
+ c -> e2 "Facteur imprévu"
+  
+  
+    e4 -> e5 "Match terminé"
+
+
+ e5 -> finalstate "Fin"
+
+}

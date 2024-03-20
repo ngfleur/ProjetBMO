@@ -1,0 +1,21 @@
+StateDiagram [frame=true framecolor=steelblue label="State Diagram" splines=ortho] {
+	
+  state "Pari en cours" as p1
+  state "Fin de Pari" as p2
+  state "Pari réussi" as p3 with behavior "solde += mise * cote"
+  state "Pari perdu" as p4
+  
+
+  
+  initialState -> p1 "Placer un Pari"
+  p1 -> p2 "Match terminé"
+  
+ choice c
+ p2 -> c
+ c -> p3 "Résultat Pari Correct"
+ c -> p4 "Résultat Pari Incorrect"
+  
+ p3 -> finalstate "Fin"
+ p4 -> finalstate "Fin"
+
+}
