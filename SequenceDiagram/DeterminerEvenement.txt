@@ -1,0 +1,23 @@
+SequenceDiagram [frame=true framecolor=steelblue label="Sequence Diagram"] {
+ actor bookMaker
+ entity plateforme
+ database baseDonnees
+ 
+   bookMaker --> plateforme "Demande des évènements actuels"
+   activate plateforme
+   bookMaker <-r- plateforme "Liste des évènements sportifs du moment"
+   deactivate plateforme
+
+   bookMaker --> plateforme "Sélection et soumission du choix des évènements à proposer"
+   activate plateforme
+
+   plateforme --> baseDonnees "Enregistrement des évènements comme évènements de Paris"
+   activate baseDonnees
+   plateforme <-r- baseDonnees "Enregistrement réussi"
+   deactivate baseDonnees
+
+   bookMaker <-r- plateforme "évènements enregistés"
+   deactivate plateforme
+
+  
+}

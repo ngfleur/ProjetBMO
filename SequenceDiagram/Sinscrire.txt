@@ -1,0 +1,29 @@
+SequenceDiagram [frame=true framecolor=steelblue label="Sequence Diagram"] {
+ actor parieur
+ entity plateforme
+ database baseDonnees
+ 
+  parieur --> plateforme "Demande inscription"
+  activate plateforme
+  parieur <-r- plateforme "renvoie un formulaire d'incription"
+    deactivate plateforme
+
+  parieur --> plateforme "Remplissage et soumission du formulaire"
+   activate plateforme
+ plateforme --> plateforme "véfication des données"
+
+  fragment alt "[Informations correctes]" {
+  	 plateforme --> baseDonnees "Enregistrement des données"
+             activate baseDonnees
+plateforme <-r- baseDonnees "Enregistrement réussi"
+        deactivate baseDonnees
+  		parieur <-r- plateforme "Enregistrement réussi"
+
+  case "[Informations incorrectes]"
+  parieur <-r- plateforme "Informations incorrectes"
+
+  	deactivate plateforme
+  }
+
+  
+}

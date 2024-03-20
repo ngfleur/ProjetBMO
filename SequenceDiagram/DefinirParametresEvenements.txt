@@ -1,0 +1,31 @@
+
+SequenceDiagram [frame=true framecolor=steelblue label="Sequence Diagram"] {
+ actor bookMaker
+ entity plateforme
+ database baseDonnees
+ 
+   bookMaker --> plateforme "Demande de la liste des évènements enregistrés"
+   activate plateforme
+   bookMaker <-r- plateforme "Liste des évènements"
+   deactivate plateforme
+
+   bookMaker --> plateforme "Sélection d'un évènement"
+   activate plateforme
+   bookMaker <-r- plateforme "Accès aux détails relatifs à l'évènement"
+   deactivate plateforme
+  
+   bookMaker --> plateforme "définition des paramètres de l'évènement"
+   activate plateforme
+
+   
+
+   plateforme --> baseDonnees "Enregistrement des paramètres de l'évènements"
+   activate baseDonnees
+   plateforme <-r- baseDonnees "Enregistrement réussi"
+   deactivate baseDonnees
+
+   bookMaker <-r- plateforme "Enregistrement réussi"
+   deactivate plateforme
+
+  
+}

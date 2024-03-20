@@ -1,0 +1,33 @@
+
+SequenceDiagram [frame=true framecolor=steelblue label="Sequence Diagram"] {
+ actor parieur
+ entity plateforme
+ database baseDonnees
+ 
+  parieur --> plateforme "Demande de formulaire de placement de pari"
+  activate plateforme
+  parieur <-r- plateforme "renvoie un formulaire"
+  deactivate plateforme
+
+  parieur --> plateforme "Remplir les détails du Pari(évènement sportif,mise, etc..)"
+    activate plateforme
+	plateforme --> plateforme "véfication du solde du Parieur"
+
+  fragment alt "[Solde suffisant]" {
+  	plateforme --> plateforme "Validation Pari,Pari soumis"
+
+     plateforme --> baseDonnees "Enregistrement ticket de Pari"
+          activate baseDonnees
+plateforme <-r- baseDonnees "Enregistrement réussi"
+      deactivate baseDonnees
+
+  		parieur <-r- plateforme "Pari Validé"
+
+  case "[Solde insuffisant]"
+  parieur <-r- plateforme "solde insuffisant"
+
+  	deactivate plateforme
+  }
+
+  
+}
