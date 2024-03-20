@@ -1,0 +1,61 @@
+ClassDiagram [frame=true framecolor=steelblue label="Class Diagram"] {
+ class Parieur{
+  private idParieur : string
+  private email : string
+  private solde : double
+  private login : string
+ }
+  
+ class Pari{
+  private idPari : string
+  private resultatPari : string
+  private mise : string
+  private vainqueur : string
+  private delai : Date
+
+ }
+ class PariSimple {
+  private idPs : string
+     private previsonsPS : string
+
+ }
+  class PariAvance {
+  private idPa : string
+  private previsonsPA : string
+  private ecart : string
+ }
+
+
+ class Sport{
+  private idSport : string
+  private nomSport : string
+
+  }
+  class Regle {
+  private idRegle : string
+  private nomRegle : string
+
+ }
+ 
+ class EventSportif{
+     private idEvent : string
+     private duree : Date
+     private dateDebut : Date
+     private score : string
+     private cote : Double
+     private information : string
+
+
+   }
+  
+  
+  
+ PariSimple -g-> Pari
+ PariAvance -g-> Pari
+  
+ Regle "0..*" <-- "1..1" Sport "Avoir";
+ Sport "1..1" <-- "1..*" EventSportif "Concerner";
+ Pari "0..*" --> "1..1" EventSportif "Concerner"; 
+ Pari "0..*" <-- "1..1" Parieur "Placer"
+  
+}
