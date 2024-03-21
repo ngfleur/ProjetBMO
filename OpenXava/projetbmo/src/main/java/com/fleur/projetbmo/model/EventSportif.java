@@ -1,6 +1,7 @@
 package com.fleur.projetbmo.model;
 
 import java.time.*;
+import java.util.*;
 
 import javax.persistence.*;
 
@@ -35,6 +36,12 @@ public class EventSportif extends Identifiable {
 	
 	@Column
     String information;
+	
+	@ManyToOne(optional=false)
+	Sport sport;
+	
+	@OneToMany(mappedBy="eventSportif")
+	Collection<Pari> paris;
 	
 	
 

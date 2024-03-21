@@ -1,5 +1,7 @@
 package com.fleur.projetbmo.model;
 
+import java.util.*;
+
 import javax.persistence.*;
 
 import org.openxava.annotations.*;
@@ -33,5 +35,8 @@ public class Parieur extends Identifiable {
 	@Column
 	@Required
     Double jetons;
+	
+	@OneToMany(mappedBy="parieur")
+	Collection<Pari> paris;
 
 }

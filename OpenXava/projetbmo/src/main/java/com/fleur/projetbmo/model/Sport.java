@@ -25,4 +25,9 @@ public class Sport extends Identifiable {
 	@OneToMany(mappedBy="sport")
 	Collection<Regle> regles;
 	
+	@OneToMany(mappedBy="sport")
+	Collection<EventSportif> eventSportifs;
+	
+	
+	
 }

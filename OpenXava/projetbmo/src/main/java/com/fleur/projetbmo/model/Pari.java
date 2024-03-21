@@ -30,5 +30,10 @@ public abstract class Pari extends Identifiable {
 	
 	@Column
     Double delai;
-
+	
+	@ManyToOne(optional=false)
+	EventSportif eventSportif ;
+	
+	@ManyToOne(optional=false)
+	Parieur parieur ;
 }
