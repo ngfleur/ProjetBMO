@@ -1,7 +1,7 @@
 UseCaseDiagram [frame=true framecolor=steelblue label="Usecase Diagram"] {
   
   actor b as "Bookmaker"
-  usecase b1 as "Determiner les évènements proposés par le système"
+  usecase b1 as "Déterminer les évènements proposés par le système"
   
   usecase b2 as "Définir les paramètres relatifs à un évènement"
   b -- b1

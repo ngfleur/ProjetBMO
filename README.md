@@ -8,8 +8,3 @@
 - Diagramme de séquences
 - Diagramme d'états-transitions
 - Diagramme de cas d'utilisation
-
-
-
-
-
