@@ -1,3 +1,4 @@
 # Diagramme de classes
 
-Mon diagramme ...
+Le diagramme de classe révèle les liens entre les entités de notre systèmes. Ces entiés sont :
+

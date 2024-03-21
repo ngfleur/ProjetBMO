@@ -1,6 +1,6 @@
 # Diagramme de cas d'utilisation
 
-Notre diagramme de cas d'utilisation présente les différent champ d'actions des acteurs sur notre système.
+Notre diagramme de cas d'utilisation présente les différents champ d'actions des acteurs sur notre système.
 
 ## Cas d'utiliation 1 : S'inscrire
 Le parieur doit s'inscrire pour avoir accès au système.
