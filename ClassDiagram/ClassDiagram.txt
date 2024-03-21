@@ -1,15 +1,16 @@
 ClassDiagram [frame=true framecolor=steelblue label="Class Diagram"] {
  class Parieur{
   private idParieur : string
+  private nom : string
   private email : string
-  private solde : double
   private login : string
+  private jetons : double
  }
   
  class Pari{
   private idPari : string
   private resultatPari : string
-  private mise : string
+  private mise : double
   private vainqueur : string
   private delai : Date
 

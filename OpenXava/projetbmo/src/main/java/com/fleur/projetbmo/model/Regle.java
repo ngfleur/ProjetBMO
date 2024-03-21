@@ -14,22 +14,11 @@ import lombok.*;
  */
 
 @Entity @Getter @Setter
-public class Parieur extends Identifiable {
+public class Regle extends Identifiable {
 	
 	@Column
 	@Required
-	String nom;
+	String nomRegle;
 	
-	@Column
-	@Required
-	String email;
 	
-	@Column
-	@Required
-	String login;
-	
-	@Column
-	@Required
-    Double jetons;
-
 }

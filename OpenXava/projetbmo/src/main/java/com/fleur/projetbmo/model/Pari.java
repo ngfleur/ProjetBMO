@@ -14,22 +14,21 @@ import lombok.*;
  */
 
 @Entity @Getter @Setter
-public class Parieur extends Identifiable {
+public abstract class Pari extends Identifiable {
 	
 	@Column
 	@Required
-	String nom;
+	String resultatPari;
 	
 	@Column
 	@Required
-	String email;
+	Double mise;
 	
 	@Column
 	@Required
-	String login;
+	String vainqueur;
 	
 	@Column
-	@Required
-    Double jetons;
+    Double delai;
 
 }

@@ -1,5 +1,7 @@
 package com.fleur.projetbmo.model;
 
+import java.time.*;
+
 import javax.persistence.*;
 
 import org.openxava.annotations.*;
@@ -14,22 +16,27 @@ import lombok.*;
  */
 
 @Entity @Getter @Setter
-public class Parieur extends Identifiable {
+public class EventSportif extends Identifiable {
 	
 	@Column
 	@Required
-	String nom;
+	int duree;
 	
 	@Column
 	@Required
-	String email;
+	LocalDate dateDebut;
+	
+	@Column
+	String score;
 	
 	@Column
 	@Required
-	String login;
+	Double cote;
 	
 	@Column
-	@Required
-    Double jetons;
+    String information;
+	
+	
+
 
 }

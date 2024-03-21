@@ -3,7 +3,6 @@ package com.fleur.projetbmo.model;
 import javax.persistence.*;
 
 import org.openxava.annotations.*;
-import org.openxava.model.*;
 
 import lombok.*;
 
@@ -14,22 +13,11 @@ import lombok.*;
  */
 
 @Entity @Getter @Setter
-public class Parieur extends Identifiable {
+public class PariSimple extends Pari {
 	
 	@Column
 	@Required
-	String nom;
+	String previsionsPS;
 	
-	@Column
-	@Required
-	String email;
-	
-	@Column
-	@Required
-	String login;
-	
-	@Column
-	@Required
-    Double jetons;
 
 }
