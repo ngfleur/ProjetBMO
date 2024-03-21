@@ -1,5 +1,7 @@
 package com.fleur.projetbmo.model;
 
+import java.util.*;
+
 import javax.persistence.*;
 
 import org.openxava.annotations.*;
@@ -19,5 +21,8 @@ public class Sport extends Identifiable {
 	@Column
 	@Required
 	String nomSport;
+	
+	@OneToMany(mappedBy="sport")
+	Collection<Regle> regles;
 	
 }

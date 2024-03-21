@@ -1,0 +1,9 @@
+/*C5*/SET SCHEMA PUBLIC
+DISCONNECT
+/*C6*/SET SCHEMA PUBLIC
+create table EventSportif (id varchar(32) not null, cote double, dateDebut date, duree integer, information varchar(255), score varchar(255), primary key (id))
+create table Pari (DTYPE varchar(31) not null, id varchar(32) not null, delai double, mise double, resultatPari varchar(255), vainqueur varchar(255), previsionsPS varchar(255), ecart varchar(255), previsionsPA varchar(255), primary key (id))
+alter table Parieur add column email varchar(255)
+alter table Parieur add column login varchar(255)
+create table Regle (id varchar(32) not null, nomRegle varchar(255), primary key (id))
+create table Sport (id varchar(32) not null, nomSport varchar(255), primary key (id))

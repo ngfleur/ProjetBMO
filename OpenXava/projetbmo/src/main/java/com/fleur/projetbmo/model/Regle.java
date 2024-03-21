@@ -20,5 +20,6 @@ public class Regle extends Identifiable {
 	@Required
 	String nomRegle;
 	
-	
+	@ManyToOne(optional=false)
+	Sport sport;
 }

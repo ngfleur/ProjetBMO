@@ -22,10 +22,12 @@ public class Parieur extends Identifiable {
 	
 	@Column
 	@Required
+	//@Email
 	String email;
 	
 	@Column
 	@Required
+	@Password
 	String login;
 	
 	@Column
