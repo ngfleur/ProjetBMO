@@ -1,4 +1,4 @@
-# Diagramme de séquences - à compl
+# Diagramme de séquences 
 
 Les diagrammes de séquences présentent de façon détaillée le déroulement des cas d'utilisation.
 
@@ -6,10 +6,11 @@ Les diagrammes de séquences présentent de façon détaillée le déroulement d
 Le parieur doit s'inscrire pour avoir accès au système.
 
 ## Diagramme de séquences 2 : Pour placer un pari
-Le système permet à un parieur de placer un pari en sélectionnant le type de pari, l'évènement sportif et en précisant le montant de la mise.
+Pour placer un pari, il est necessaire d'avoir la validation du système sur les informations rentrées.
 
 ## Diagramme de séquences 3 : Pour déterminer les évènements proposés par le système
-Le système permet à un Bookmaker de parcourir et sélectioinner les évènements sportifs qui seront proposés aux parieurs.
+Décrire comment le bookmaker intéragit avec  le système pour 
+proposer des évènements sportifs aux parieurs.
 
 ## Diagramme de séquences 4 : Pour définir les paramètres relatifs à un évènement
-Le système permet aussi au Bookmaker de configurer chacun des évènements proposé par le système pour ajuster les cotes, mes variantes, etc.
+Les détails d'une modification des paramètres d'un évènement faite par le bookmaker 
